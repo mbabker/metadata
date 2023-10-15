@@ -10,6 +10,8 @@
     <arg name="colors"/>
     <arg value="nps"/>
 
+    <config name="php_version" value="70200"/>
+
     <file>src/</file>
     <file>tests/</file>
 
@@ -28,7 +30,6 @@
         <exclude name="SlevomatCodingStandard.ControlStructures.EarlyExit"/>
 
         <exclude name="SlevomatCodingStandard.Commenting.RequireOneLinePropertyDocComment"/>
-
     </rule>
 
     <rule ref="SlevomatCodingStandard.TypeHints.ReturnTypeHint.MissingTraversableTypeHintSpecification">
@@ -45,14 +46,12 @@
         <exclude-pattern>src/SerializationHelper.php</exclude-pattern>
     </rule>
 
-
     <rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHint.MissingNativeTypeHint">
         <exclude-pattern>src/SerializationHelper.php</exclude-pattern>
     </rule>
     <rule ref="SlevomatCodingStandard.TypeHints.ReturnTypeHint.MissingNativeTypeHint">
         <exclude-pattern>src/SerializationHelper.php</exclude-pattern>
     </rule>
-
 
     <rule ref="SlevomatCodingStandard.ControlStructures.RequireYodaComparison"/>
 
@@ -76,6 +75,18 @@
         </properties>
     </rule>
 
+    <rule ref="SlevomatCodingStandard.Commenting.RequireOneLineDocComment.MultiLineDocComment">
+        <exclude name="SlevomatCodingStandard.Commenting.RequireOneLineDocComment.MultiLineDocComment"/>
+    </rule>
+    <rule ref="SlevomatCodingStandard.Commenting.DocCommentSpacing.IncorrectOrderOfAnnotationsInGroup">
+        <exclude name="SlevomatCodingStandard.Commenting.DocCommentSpacing.IncorrectOrderOfAnnotationsInGroup"/>
+    </rule>
+    <rule ref="SlevomatCodingStandard.Commenting.InlineDocCommentDeclaration.InvalidFormat">
+        <exclude name="SlevomatCodingStandard.Commenting.InlineDocCommentDeclaration.InvalidFormat"/>
+    </rule>
+    <rule ref="SlevomatCodingStandard.Commenting.AnnotationName.AnnotationNameIncorrect">
+        <exclude name="SlevomatCodingStandard.Commenting.AnnotationName.AnnotationNameIncorrect"/>
+    </rule>
 
     <rule ref="SlevomatCodingStandard.Namespaces.ReferenceUsedNamesOnly">
         <properties>
@@ -129,12 +140,7 @@
         <exclude-pattern>src/*</exclude-pattern>
     </rule>
 
-    <rule ref="SlevomatCodingStandard.Classes.UnusedPrivateElements">
-        <exclude-pattern>tests/*</exclude-pattern>
-    </rule>
-
     <rule ref="SlevomatCodingStandard.Classes.ModernClassNameReference.ClassNameReferencedViaMagicConstant">
         <exclude-pattern>tests/*</exclude-pattern>
     </rule>
-
 </ruleset>

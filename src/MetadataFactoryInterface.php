@@ -22,7 +22,6 @@ interface MetadataFactoryInterface
      *
      * @return ClassHierarchyMetadata|MergeableClassMetadata|null
      *
-     * @phpcsSuppress SlevomatCodingStandard.TypeHints.ReturnTypeHint.MissingNativeTypeHint
      * @phpcsSuppress SlevomatCodingStandard.TypeHints.TypeHintDeclaration.UselessReturnAnnotation
      */
     public function getMetadataForClass(string $className);
